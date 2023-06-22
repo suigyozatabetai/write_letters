@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>マリフォー選挙区検索マップ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="device-width,user-scalable=no">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=&callback=initAutocomplete&libraries=places,marker&v=weekly"
+      defer
+    ></script>
+    <link rel="icon" href="./favicon.ico" id="favicon">
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+    </style>
+
+   <header>
+    <div class="title">
+        \ 国会議員に手紙を書こう /
+    </div>
+   </header>
+
+    <div class="content">
+      <div class="step-one">
+        <h2>
+          ①選挙区を検索する
+        </h2>
+
+        <div class="search-box">
+          <input
+          id="pac-input"
+          class="controls"
+          type="text"
+          placeholder="住所/郵便番号を入力"
+          />
+        </div>
+
+      <div id="map" class="senkyokumap"></div>
+      </div>
+
+      <div class="step-two">
+        <h2>
+          ②手紙を書く議員を決める
+        </h2>
+        <div>
+          <iframe src="https://lookerstudio.google.com/embed/reporting/c1182424-ddbc-4070-98bd-12e129da9778/page/NT4UD" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="step-three">
+        <h2>
+          ③手紙を書く
+        </h2>
+        <div class="step-three-content">
+          実際に書いてみましょう！
+        </div>
+      </div>
+    </div>
+
+    <div>
+			<div id="buttons" class="hide">
+        <a class="social-button twitter" href="https://twitter.com/marriage4all_?s=20" target="_blank"></a>
+        <a class="social-button facebook" href="https://www.facebook.com/marriageforalljapan" target="_blank"></a>
+        <a class="social-button instagram" href="https://instagram.com/marriageforalljapan?igshid=MzRlODBiNWFlZA==" target="_blank"></a>
+        <a class="social-button mfaj" href="https://www.marriageforall.jp/" target="_blank"></a>
+      </div>
+    </div>
+
+    <footer>
+      <ul class="footer-menu">
+        <li><a href="https://www.marriageforall.jp/">公式ホームページ</a></li>
+        <li>‖</li>
+        <li><a href="https://meter.marriageforall.jp/">マリフォー国会メーター</a></li>
+       </ul>
+      <p>© 公益社団法人MarriageForAllJapan - 結婚の自由をすべての人に</p>
+    </footer>
+
+  </body>
+</html>
