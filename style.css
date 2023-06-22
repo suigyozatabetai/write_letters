@@ -35,9 +35,20 @@ header {
   background: #f4f4f4;
 }
 
+.step-one-content{
+  position: relative;
+  text-align: center;
+  margin-top: 45px;
+  margin-bottom: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 200px;
+  font-size: 15px;
+  color: rgb(12, 12, 12);
+}
 /* 検索ボックスのスタイル */
 .controls {
-  margin-top: 30px;
+  margin-top: -150px;
   position: absolute;
   left: 0;
   right: 0;
@@ -58,12 +69,12 @@ header {
 
 .senkyokumap {
   position: relative; /* 相対位置指定に変更 */
-  margin-top: 150px;
+  margin-top: 10px;
   margin-left: 20px;
   margin-right: 20px;
   height: 60vh; /* 画面の縦方向の半分の高さ */
-  min-height: 300px;
-  min-width: 300px;
+  min-height: 450px;
+  min-width: 450px;
 }
 
 #infoWindow {
@@ -127,7 +138,7 @@ iframe{
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 200px;
-  font-size: 18px;
+  font-size: 15px;
   color: rgb(12, 12, 12);
 }
   
