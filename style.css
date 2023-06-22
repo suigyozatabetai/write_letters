@@ -99,19 +99,19 @@ header {
 }
 
 iframe{
-  margin-top: 350px;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 100px;
   width: 90%;
-  height: 600px; 
+  height: 1500px; 
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 /*step-three*/
 .step-three h2 {
   position: relative;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
   font-size: 30px;
@@ -146,3 +146,32 @@ display: inline;
 a{
   color: white;
 }
+
+
+  /* レスポンシブ対応 */
+  @media (max-width: 767px) {
+  
+    #pac-input {
+    font-size: 40px;
+    width: 100%;
+    max-width: 100%; /* 追加 */
+    }
+  
+    #buttons button,
+    #buttons a {
+      width: 100px !important;
+      height: 100px !important;
+    }
+  }
+  
+  @media (max-width: 480ppx) {
+    #pac-input {
+    font-size: 40px; /* 必要に応じて調整 */
+    }
+  
+    #buttons button,
+    #buttons a {
+      width: 100px !important;
+      height: 100px !important;
+    }
+  }
