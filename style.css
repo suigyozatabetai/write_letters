@@ -146,32 +146,3 @@ display: inline;
 a{
   color: white;
 }
-
-
-  /* レスポンシブ対応 */
-  @media (max-width: 767px) {
-  
-    #pac-input {
-    font-size: 40px;
-    width: 100%;
-    max-width: 100%; /* 追加 */
-    }
-  
-    #buttons button,
-    #buttons a {
-      width: 100px !important;
-      height: 100px !important;
-    }
-  }
-  
-  @media (max-width: 480ppx) {
-    #pac-input {
-    font-size: 40px; /* 必要に応じて調整 */
-    }
-  
-    #buttons button,
-    #buttons a {
-      width: 100px !important;
-      height: 100px !important;
-    }
-  }
