@@ -4,23 +4,43 @@ html[lang="ja"] {
 }
 
 /*ページタイトル*/
-header {
+.banner {
   width: 100%;
-  height: 300px;
+  height: 600px;
   margin: 0;
-  padding-top: 150px;
-  text-align: center;
-  font-size: 70px;
-  color: white;
-  background-color: #CB2F2A;
-  font-weight: bold;
+}
+
+.title{
+  margin-top: 120px;
+  margin-bottom: 10px;
+}
+
+
+.heading02 {
+	position: relative;
+	font-size: 35px;
+	text-align: center;
+	border-bottom: 5px solid #dddddd;
+  margin-right: 200px;
+  margin-left: 200px;
+}
+
+.heading02::after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70px;
+	height: 5px;
+	background-color: #CB2F2A;
 }
 
 /*step-one*/
 .step-one h2 {
   position: relative;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 150px;
   margin-left: auto;
   margin-right: auto;
   font-size: 30px;
@@ -215,6 +235,8 @@ a{
   color: white;
 }
 
+
+  
 
 
   
