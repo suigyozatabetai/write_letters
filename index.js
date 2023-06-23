@@ -262,7 +262,7 @@ function initAutocomplete() {
        ////"LatLngBounds"クラスは境界を作るインスンタンスを作成。引数は左下、右上の座標。
        //"geometry"はplaceライブラリのメソッド。
         // 新しいズームレベルを指定
-       const newZoom = 20;
+       const newZoom = 12;
        const bounds = new google.maps.LatLngBounds();
        places.forEach((place) => {
          if (!place.geometry) {
@@ -278,26 +278,28 @@ function initAutocomplete() {
            anchor: new google.maps.Point(17, 34),
            scaledSize: new google.maps.Size(25, 25),
          };
-   
+
+
          // 検索した位置にマーカーを立てる
          markers.push(
-           new google.maps.Marker({
-             map,
-             icon,
-             title: place.name,
-             position: place.geometry.location,
-           })
-         );
-   
-         //viewport"メソッド
+          new google.maps.Marker({
+            map,
+            icon,
+            title: place.name,
+            position: place.geometry.location,
+          })
+        );
+        
+           //viewport"メソッド
          //"union"メソッドはLatLngBoundsクラスのメソッド。自身の境界に指定した境界を取り込んで合成する。
          //"extend"メソッドはLatLngBoundsクラスのメソッド。自身の境界に新しく位置座標を追加する。
          if (place.geometry.viewport) {
-           bounds.union(place.geometry.viewport);
-         } else {
-           bounds.extend(place.geometry.location);
-         }
-       });
+          bounds.union(place.geometry.viewport);
+        } else {
+          bounds.extend(place.geometry.location);
+        }
+      });
+   
    
         // 新しいズームレベルで地図を表示
         map.fitBounds(bounds);
