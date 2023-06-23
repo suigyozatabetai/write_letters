@@ -282,8 +282,10 @@ function initAutocomplete() {
   });
 
   // 新しいズームレベルで地図を表示
-  map.fitBounds(bounds);
-  map.setZoom(12);
+  if (places.length > 0) {
+    map.fitBounds(bounds);
+    map.setZoom(12);
+  }
 });
      
    
