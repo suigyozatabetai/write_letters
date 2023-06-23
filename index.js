@@ -2,7 +2,7 @@ function initAutocomplete() {
     //マップの初期設定
     const map = new google.maps.Map(document.getElementById("map"), {
       center: { lat: 38.675679, lng: 140.745433 },
-      zoom: 5,
+      zoom: 7,
       gestureHandling: "greedy",
       disableDefaultUI: true,
       restriction: {
@@ -284,7 +284,7 @@ function initAutocomplete() {
   // 新しいズームレベルで地図を表示
   if (places.length > 0) {
     map.fitBounds(bounds);
-    map.setZoom(12);
+    map.setZoom(7);
   }
 });
      
