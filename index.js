@@ -237,76 +237,55 @@ function initAutocomplete() {
       ]
     });
 
-     //serchboxの実装（参考：https://qiita.com/tkhshiq/items/723d2a993feb712f021e）
-     const input = document.getElementById("pac-input");
-     const searchBox = new google.maps.places.SearchBox(input);
-     map.addListener("bounds_changed", () => {
-       searchBox.setBounds(map.getBounds());
-     });
-   
-     let markers = [];
-     searchBox.addListener("places_changed", () => {
-   
-       const places = searchBox.getPlaces();
-       // 古いマーカーを消す
-       if (places.length == 0) {
-         return;
-       }
-       
-       //"forEach"メソッドは引数にある関数へ、Mapオブジェクトのキー/値を順に代入･関数の実行をする。
-       markers.forEach((marker) => {
-         marker.setMap(null);
-       });
-       markers = [];
-       
-       ////"LatLngBounds"クラスは境界を作るインスンタンスを作成。引数は左下、右上の座標。
-       //"geometry"はplaceライブラリのメソッド。
-        // 新しいズームレベルを指定
-       const newZoom = 12;
-       const bounds = new google.maps.LatLngBounds();
-       places.forEach((place) => {
-         if (!place.geometry) {
-           console.log("Returned place contains no geometry");
-           return;
-         }
-   
-         //"icon"はアイコンを表すオブジェクト。マーカーをオリジナル画像にしたいときなど。
-         //"Point"クラスはマーカーのラベルなどの位置を決めるインスタンスメソッド。
-         const icon = {
-           size: new google.maps.Size(71, 71),
-           origin: new google.maps.Point(0, 0),
-           anchor: new google.maps.Point(17, 34),
-           scaledSize: new google.maps.Size(25, 25),
-         };
+   // searchboxの実装（参考：https://qiita.com/tkhshiq/items/723d2a993feb712f021e）
+  const input = document.getElementById("pac-input");
+  const searchBox = new google.maps.places.SearchBox(input);
+  map.addListener("bounds_changed", () => {
+    searchBox.setBounds(map.getBounds());
+  });
 
+  let markers = [];
+  searchBox.addListener("places_changed", () => {
+    const places = searchBox.getPlaces();
 
-         // 検索した位置にマーカーを立てる
-         markers.push(
-          new google.maps.Marker({
-            map,
-            icon,
-            title: place.name,
-            position: place.geometry.location,
-          })
-        );
-        
-           //viewport"メソッド
-         //"union"メソッドはLatLngBoundsクラスのメソッド。自身の境界に指定した境界を取り込んで合成する。
-         //"extend"メソッドはLatLngBoundsクラスのメソッド。自身の境界に新しく位置座標を追加する。
-         if (place.geometry.viewport) {
-          bounds.union(place.geometry.viewport);
-        } else {
-          bounds.extend(place.geometry.location);
-        }
-      });
-   
-   
-        // 新しいズームレベルで地図を表示
-        map.fitBounds(bounds);
-        if (map.getZoom() > newZoom) {
-          map.setZoom(newZoom);
-        }
-     });
+  // 古いマーカーを消す
+  markers.forEach((marker) => {
+    marker.setMap(null);
+  });
+  markers = [];
+
+  const bounds = new google.maps.LatLngBounds();
+  places.forEach((place) => {
+    if (!place.geometry) {
+      console.log("Returned place contains no geometry");
+      return;
+    }
+
+    const icon = {
+      size: new google.maps.Size(71, 71),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(17, 34),
+      scaledSize: new google.maps.Size(25, 25),
+    };
+
+    // 検索した位置にマーカーを立てる
+    markers.push(
+      new google.maps.Marker({
+        map,
+        icon,
+        title: place.name,
+        position: place.geometry.location,
+      })
+    );
+
+    bounds.extend(place.geometry.location);
+  });
+
+  // 新しいズームレベルで地図を表示
+  map.fitBounds(bounds);
+  map.setZoom(12);
+});
+     
    
    
      // GeoJSONファイルの読み込み
