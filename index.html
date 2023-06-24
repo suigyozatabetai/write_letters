@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-     <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1RMVCP25C"></script>
     <script>
@@ -33,17 +32,19 @@
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <script src="./index.js"></script>
   </head>
-  
+
   <body>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
     </style>
 
    <header>
-    <img src="Postcard red horizontal_page-0001.jpg" class="banner">
+    <div class="banner-animation">
+      <img src="Postcard red horizontal_page-0001.jpg" class="banner">
+    </div>
     <div class="title">
       <h1 class="heading02">
         国会議員に手紙を書こう！
@@ -51,7 +52,7 @@
     </div>
    </header>
 
-    <div class="content">
+   <div class="content">
       <div class="step-one">
         <h2>
           ①手紙を書く議員を決める
@@ -69,7 +70,7 @@
           という方は、②に進んでマップから選挙区を調べてください🔎
         </div>
 
-        <div>
+        <div div="giin-gallery">
           <iframe src="https://lookerstudio.google.com/embed/reporting/c1182424-ddbc-4070-98bd-12e129da9778/page/NT4UD" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </div>
@@ -97,65 +98,89 @@
         </div>
 
       <div id="map" class="senkyokumap"></div>
-      </div>
+     </div>
 
 
       <div class="step-three">
         <h2>
           ③手紙を書く
         </h2>
-        <div class="step-three-content">
-          何を書いたらいいか分からないという方向けに例文をご紹介します！
-          <br>
-          「このとおりでないとダメ」というわけではないので、
-          <br>
-          ご自分の関心やテイストに合わせアレンジなどしてください。
-          <br>
-          率直な想いを議員の方に届けましょう❤️‍🔥
+          <div class="attention">
+            <p class="attention-title">
+              重要！
+            </p>
+            <p  class="attention-content">
+              誹謗中傷や攻撃的な内容にならないように気をつけましょう。
+              <br>
+              賛成の議員さんはますます熱心に取り組むように。
+              <br>
+              どちらとも言えない議員さんや反対の議員さんは関心を持って理解を深めるように。
+              <br>
+              あなたのこと、想い、考えなどを丁寧に伝えることで、国会に味方を増やしていきましょう❤️‍🔥
+            </p>
+          </div>
 
-          <div class="box1">
-            <h3>賛同している議員向け</h3>
-            <div class="inner">
-              〇〇さん
+          <div class="howtowrite-title">
+            <h3>文章を書くときのアイディア</h3>
+            <p>
+              この通りではなくても、あなたの書きたいこと、あなたの書き方で
               <br>
+              もちろんOKです！（シンプルな一言でも◎）
               <br>
-              私は比例○○ブロックである○○出身です。
-              <br>
-              同性婚の法制化に賛成ありがとうございます。
-              <br>
-              とても嬉しいです。
-              <br>
-              一日も早く日本でも性別を問わず結婚ができるよう、よろしくお願いします。 
-              <br>
-              <br>
-              #結婚の自由をすべての人に
-            </div> 
+              ひとつの参考にしてみてくださいね！
+            </p>
           </div>
-          <div class="box2">
-            <h3>反対している議員向け</h3>
-            <div class="inner">
-              〇〇さん
+
+          <div class="howtowrite-content">
+            <h4 class="top">1. 挨拶と自己紹介</h4>
+            <p>
+              議員さんの選挙区に住んでいる場合、お住まいの地域を記すことは効果的です。
               <br>
+              <span class="callout1">
+                ただし気が進まない場合は記さなくても構いません。
+                <br>
+                ご自身の状況に応じてどうするかご検討ください。
+            </span>
+            </p>
+
+            <h4>2. 手紙を書いた理由、目的</h4>
+            <p>
+              議員さんが現在評している結婚の平等（同性婚の法制化）に対する立場や意見について、
               <br>
-              私は○○○○の住民です。
+              あなたの立場や意見についても触れながら目的を伝えてみましょう。
+            </p>
+
+            <h4>3. 具体的なメッセージ</h4>
+            <p>
+              今どのように問題があると考えているのか、そして結婚の平等（同性婚の法制化）を実現すべき理由に
               <br>
-              同性婚の法制化に賛成お願いします。
+              ついて丁寧な説明を書いてもよいかもしれません。
               <br>
-              性別が同じであることで結婚できず希望を持てません。
+              または、あなたのエピソードやあなたにとって大切な想いについて綴るというのも、よいかもしれません。
+            </p>
+
+            <h4>4. 日付、名前、連絡先 など</h4>
+            <p>
+              ご自身の名前や連絡先を記しても問題ないと思われる方は記してください。
               <br>
-              日本で結婚したいです。
+              ※任意ですので無理に書く必要はありません。
               <br>
-              <br>
-              #結婚の自由をすべての人に
-            </div> 
-          </div>
-      </div>
+              <span class="callout2">
+                住所を全部書きたくない方は、お住まいの都道府県名や市区町村名だけや
+                <br>
+                選挙区名（東京1区など）を書いて、議員さんにアピールするのもおすすめです！
+              </span>
+            </p>
+          </div> 
+        </div> 
+      </div> 
+
 
     <footer>
       <ul class="footer-menu">
-        <li><a href="https://www.marriageforall.jp/" target="_blank" rel="noopener noreferrer">公式ホームページ </a></li>
-        <li>|</li>
-        <li><a href="https://meter.marriageforall.jp/" target="_blank" rel="noopener noreferrer"> マリフォー国会メーター</a></li>
+        <li><a href="https://www.marriageforall.jp/">公式ホームページ </a></li>
+        <li>　|　</li>
+        <li><a href="https://meter.marriageforall.jp/"> マリフォー国会メーター</a></li>
        </ul>
       <p>© 公益社団法人MarriageForAllJapan - 結婚の自由をすべての人に</p>
     </footer>
