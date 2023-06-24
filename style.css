@@ -11,30 +11,6 @@ html[lang="ja"] {
   object-fit: cover;
 }
 
-.banner-animation {
-  overflow: hidden;
-  position: relative;
-}
-
-.banner-animation:before {
-  animation: banner-animation 2s cubic-bezier(.4, 0, .2, 1) forwards;
-  background: #fff;
-  bottom: 0;
-  content: '';
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-}
-
-@keyframes banner-animation {
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
 .title{
   margin-top: 120px;
   margin-bottom: 10px;
