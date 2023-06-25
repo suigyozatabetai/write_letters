@@ -68,8 +68,6 @@ body {
   position: relative;
   text-align: center;
   margin-top: 150px;
-  margin-left: auto;
-  margin-right: auto;
   font-size: 36px;
   color: #1A1A1A;
   padding: 2rem 3rem;
@@ -79,9 +77,9 @@ body {
 .step-one-content{
   position: relative;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 100px;
+  margin-left: 10%;
+  margin-right: 10%;
   font-size: 16px;
   color: #1A1A1A;
 }
@@ -110,12 +108,10 @@ iframe{
 .step-two-content{
   position: relative;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 25px;
+  margin-top: 55px;
   margin-bottom: -15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-bottom: 200px;
   font-size: 16px;
   color: #1A1A1A;
@@ -200,9 +196,8 @@ iframe{
 .attention-content{ 
   position: relative;
   text-align: center;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 10%;
+  margin-right: 10%;
   font-size: 16px;
   color: #1A1A1A;
 }
@@ -212,7 +207,7 @@ iframe{
   display: inline-block;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: 70px;
+  margin-top: 100px;
   padding: 10px 75px 10px 75px;
   font-size: 32px;
   color: #ffffff;
@@ -223,8 +218,8 @@ iframe{
 .howtowrite-title p{
   position: relative;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 10px;
   font-size: 16px;
   color: #1A1A1A;
@@ -273,11 +268,12 @@ footer{
   color: white;
   padding-top: 100px;
   text-align: center;
-  margin-top: 100px;
-  
+  margin-top: 100px;  
 }
+
 ul.footer-menu li {
 display: inline;
+font-size: 120%;
 }
 
 a{
